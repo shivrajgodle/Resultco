@@ -1,0 +1,117 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "course_name": "Engineering",
+      "branch_name": "Computer Engineering",
+      "roll_no": 9689,
+      "student_name": "Shivraj Godle",
+      "father_name": "Vishwambhar",
+      "gender": "Male"
+    },
+    {
+      "id": 2,
+      "course_name": "Engineering",
+      "branch_name": "Computer Engineering",
+      "roll_no": 9690,
+      "student_name": "shantanu patil",
+      "father_name": "rajendra",
+      "gender": "Male"
+    },
+    {
+      "id": 3,
+      "course_name": "Engineering",
+      "branch_name": "Computer Engineering",
+      "roll_no": 9691,
+      "student_name": "tejas shukla",
+      "father_name": "vishwas",
+      "gender": "Male"
+    },
+    {
+      "course_name": "Engineering",
+      "branch_name": "Computer Engineering",
+      "roll_no": 9692,
+      "student_name": "frank rausen perera",
+      "father_name": "mathew",
+      "gender": "Male",
+      "id": 4
+    },
+    {
+      "course_name": "engineering",
+      "branch_name": "computer engineering",
+      "roll_no": 9692,
+      "student_name": "willems patrik",
+      "father_name": "james",
+      "gender": "male",
+      "id": 5
+    }
+  ],
+  "Results": [
+    {
+      "id": 1,
+      "roll_no": 9689,
+      "physics": 70,
+      "chemistry": 65,
+      "maths": 60,
+      "electrical": 45,
+      "electronics": 85,
+      "chemlab": 22,
+      "physicslab": 21
+    },
+    {
+      "id": 2,
+      "roll_no": 9690,
+      "physics": 70,
+      "chemistry": 45,
+      "maths": 63,
+      "electrical": 65,
+      "electronics": 75,
+      "chemlab": 23,
+      "physicslab": 20
+    },
+    {
+      "id": 3,
+      "roll_no": 9691,
+      "physics": 64,
+      "chemistry": 75,
+      "maths": 60,
+      "electrical": 85,
+      "electronics": 81,
+      "chemlab": 19,
+      "physicslab": 21
+    },
+    {
+      "id": 4,
+      "roll_no": 9692,
+      "physics": 70,
+      "chemistry": 65,
+      "maths": 60,
+      "electrical": 45,
+      "electronics": 85,
+      "chemlab": 22,
+      "physicslab": 21
+    },
+    {
+      "id": 5,
+      "roll_no": 9693,
+      "physics": 70,
+      "chemistry": 65,
+      "maths": 60,
+      "electrical": 45,
+      "electronics": 85,
+      "chemlab": 22,
+      "physicslab": 21
+    },
+    {
+      "roll_no": 9694,
+      "physics": 87,
+      "chemistry": 67,
+      "maths": 54,
+      "electrical": 56,
+      "electronics": 76,
+      "chemlab": 21,
+      "physicslab": 20,
+      "id": 6
+    }
+  ]
+}

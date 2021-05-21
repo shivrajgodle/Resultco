@@ -1,0 +1,54 @@
+/* .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  a {
+  color: white;
+  text-decoration: none;
+  }
+
+  span {
+    border-radius:10px ;
+  } */
+
+
+  .other-spacer1 {
+    flex: auto;
+    /* flex: 1 1 auto; */
+
+  }
+
+  .marginn {
+   margin: 20px;
+  }
+
+  /* span {
+    border-radius:10px ;
+  } */
+
+  a{
+    color: white;
+    text-decoration: none;
+    }
+
+    .iconn{
+      margin-left: 10px;
+    }
+  /*
+    .iconn1{
+      margin-right: px;
+    } */
+
+    .result_btn{
+      margin: 20px;
+    }
+
+
+  /* a {
+  color: white;
+  text-decoration: none;
+  }
+
+  span {
+    border-radius:10px ;
+  } */

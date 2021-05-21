@@ -1,0 +1,28 @@
+[
+{
+  "Course_Name": "Engineering",
+  "Branch Name": "Computer Engineering",
+  "RollNo":9689,
+  " Name": "Shivraj Godle",
+  "Father Name": "Vishwambhar",
+  "Gender": "Male"
+},
+{
+  "Course_Name": "Engineering",
+  "Branch Name": "electrical Engineering",
+  "RollNo":9659,
+  " Name": "manisha Godle",
+  "Father Name": "Vishwambhar",
+  "Gender": "Female"
+},
+{
+  "Course_Name": "Engineering",
+  "Branch Name": "Entc Engineering",
+  "RollNo":9686,
+  " Name": "ganesh Godle",
+  "Father Name": "Vishwambhar",
+  "Gender": "Male"
+}
+
+
+]
