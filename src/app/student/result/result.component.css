@@ -2,3 +2,37 @@
 {
     margin-left: 20px;
 }
+
+html {
+  font-family:arial;
+  font-size: 25px;
+}
+
+td {
+  border: 2px solid #726E6D;
+  padding: 15px;
+  color:black;
+  text-align:center;
+}
+
+thead{
+  font-weight:bold;
+  text-align:center;
+  background: #625D5D;
+  color:white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+
+}
+
+.footer {
+  text-align:right;
+  font-weight:bold;
+}
+
+tbody >tr:nth-child(odd) {
+  background: #D1D0CE;
+}

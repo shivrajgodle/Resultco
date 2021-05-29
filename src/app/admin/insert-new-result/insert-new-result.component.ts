@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
 import {ResultServiceService} from '../../result-service.service'
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-insert-new-result',
@@ -32,6 +33,14 @@ export class InsertNewResultComponent implements OnInit {
     // console.log(this.insResult.value)
     this.service.sendStudResult(this.insResult.value).subscribe((result)=>{
       console.log("result is",result)
+    })
+
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Your result data has been added successfully!!!',
+      showConfirmButton: false,
+      timer: 1500
     })
   }
 

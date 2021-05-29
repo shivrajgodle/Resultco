@@ -9,7 +9,13 @@ import { HeaderFooterComponent } from './header-footer/header-footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainhomeComponent } from './mainhome/mainhome.component';
 import { AdminModule } from './admin/admin.module';
-import {HttpClientModule} from '@angular/common/http';
+
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpInterceptor } from '@angular/common/http';
+import {TokenInterceptorService} from './token-interceptor.service'
+import { AuthGuard } from './auth.guard';
+
+// import {MultiplierPipe} from './multiplier.pipe'
+
 
 @NgModule({
   declarations: [
@@ -28,7 +34,12 @@ import {HttpClientModule} from '@angular/common/http';
 
 
   ],
-  providers: [],
+  providers: [AuthGuard,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptorService,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

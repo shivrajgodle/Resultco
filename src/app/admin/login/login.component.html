@@ -1,4 +1,5 @@
 <app-navbar></app-navbar>
+
 <div class="bootstrap-wrapper">
     <div class="container">
         <div class="row" style="margin-top: 20px;">
@@ -8,15 +9,18 @@
                 </div>
                 <h1 class="text-center">Log in to RESULTCO</h1>
 
-                <form #loginForm="ngForm" (ngSubmit)="onLogin(); loginForm.resetForm()">
+              <div *ngIf="isLoginerr" class="red-text center error-message">
+                <i class="material-icons">error</i> 
+                incorrect admin-id or password
+              </div>
+              
+                <form #loginForm="ngForm" (ngSubmit)="onLogin(Admin_Id.value,PassWord.value)">
 
                     <!-- Admin ID -->
                     <div class="form-group">
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Admin Id</mat-label>
-                        <input type="email" required matInput name="username"  placeholder="Enter Id..."  class="form-control"
-                        [(ngModel)]="LoginPage.admin_id"
-                        >
+                        <input type="text" #Admin_Id ngModel required matInput name="username"  placeholder="Enter Id..."  class="form-control">
 
                     </mat-form-field>
                   </div>
@@ -25,15 +29,14 @@
                     <div class="form-group">
                     <mat-form-field class="full-width" appearance="outline">
                       <mat-label>Password</mat-label>
-                      <input type="password" required matInput name="password" placeholder="Enter Password..."  class="form-control"
-                      [(ngModel)]="LoginPage.password"
+                      <input type="password" #PassWord ngModel required matInput name="password" placeholder="Enter Password..."  class="form-control"
                       >
                     </mat-form-field>
                     </div>
 
                      <div class="container">
-                       <button type="submit" mat-raised-button color="primary">Login</button>
-                       <button type="reset" mat-raised-button color="warning">cancel</button>
+                       <button [disabled]="!loginForm.valid" type="submit" mat-raised-button color="primary">Login</button>
+                      
                      </div>
                   </form>
                  </div>

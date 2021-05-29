@@ -9,7 +9,7 @@
               </div>
               <h1 class="text-center">Add New Student</h1>
 
-              <form [formGroup]="addNewStud" (ngSubmit)="onAddNewStud()">
+              <form [formGroup]="addNewStud" (ngSubmit)="onAddNewStud($event)">
                   <!-- course name -->
                   <div class="form-group">
                   <mat-form-field class="full-width" appearance="outline">
@@ -67,14 +67,17 @@
                    </div>
 
                    <div class="container">
-                     <button [disabled]=!addNewStud.valid type="submit"  mat-raised-button color="primary">Save</button>
-                     <button type="reset" class="margin-left" mat-raised-button color="accent">Clear</button>
+                     <button [disabled]=!addNewStud.valid type="submit"  mat-raised-button color="primary" name="save">Save</button>
+                     <button [disabled]=!addNewStud.valid type="submit" class="margin-left" mat-raised-button color="accent" name="update">update</button>
                    </div>
                 </form>
+
+
                </div>
               </div>
             </div>
           </div>
+
 
 
 

@@ -1,3 +1,4 @@
+import { MultiplierPipe } from './../multiplier.pipe';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -6,9 +7,11 @@ import { ResultComponent } from './result/result.component';
 import {MaterialModule} from '../material/material.module'
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatIconModule} from '@angular/material/icon';
+
 @NgModule({
   declarations: [
-    ResultComponent
+    ResultComponent,
+    MultiplierPipe
   ],
   imports: [
     CommonModule,
@@ -16,6 +19,7 @@ import {MatIconModule} from '@angular/material/icon';
     MaterialModule,
     MatSnackBarModule,
     MatIconModule
+   
   ]
 })
 export class StudentModule { }

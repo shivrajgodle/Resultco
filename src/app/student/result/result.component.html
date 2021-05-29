@@ -1,3 +1,5 @@
+
+
 <div class="bootstrap-wrapper">
     <div class="container">
         <div class="row" style="margin-top: 20px;">
@@ -6,23 +8,130 @@
                     <img src="assets\img\result.png" width="200" height="150">
                 </div>
                 <h1 class="text-center">Check Result Here</h1>
-  
-                <form>
+
+                <form #resultForm="ngForm" (ngSubmit)="onGetResult()">
                     <!-- Roll No -->
+                    <div class="form-group">
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Roll No</mat-label>
-                        <input matInput placeholder="Enter Roll No Here...">
-                       
+                        <input type="text" matInput type="text" placeholder="Enter Roll No Here..." class="form-control" [(ngModel)]="resultPage.roll_no" [ngModelOptions]="{standalone: true}">
+
                     </mat-form-field>
+                  </div>
                     <br>
                      <div class="container">
-                       <button mat-raised-button color="primary">Search</button>
-                       <button class="margin-left" mat-raised-button color="accent">Back</button>
+                       <button  type="submit" mat-raised-button color="primary">Search</button>
+                       <button type="reset" class="margin-left" mat-raised-button color="accent">clear</button>
+
                      </div>
                   </form>
+
+                  <br> <br> <br>
+                  <h1>Result declaired...You can check here</h1>
+
+
+
+                  <br>
                  </div>
                 </div>
               </div>
             </div>
 
-             
+
+
+
+
+        <head>
+          <hr class="new1">
+        </head>
+
+          <table *ngIf="collection?.length">
+            <thead>
+              <tr>
+                <td colspan="3">Course</td>
+                <td rowspan="2">Type</td>
+                <td rowspan="2">Full Marks</td>
+                <td rowspan="2">Passing Marks</td>
+                <td rowspan="2">Obtained Marks</td>
+
+              </tr>
+              <tr>
+                <td>Code </td>
+                <td colspan="2"> Name </td>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item1 of collection">
+              <tr>
+                <td>NAS101</td>
+                <td colspan="2">Engg. Physics-I </td>
+                <td>Theory</td>
+                <td>100</td>
+                <td> 30 </td>
+                <td> {{item1.physics}}</td>
+              </tr>
+              <tr>
+                <td>NAS102</td>
+                <td colspan="2">Engg. Chemistry</td>
+                <td>Theory</td>
+                <td>100</td>
+                <td>30</td>
+                <td>{{item1.chemistry}}</td>
+              </tr>
+              <tr>
+                <td>NAS103</td>
+                <td colspan="2">Engg. Mathematics-I </td>
+                <td>Theory</td>
+                <td>100</td>
+                <td> 30 </td>
+                <td>{{item1.maths}}</td>
+              </tr>
+              <tr>
+                <td>NEE101</td>
+                <td colspan="2">Basic Electrical Engg. </td>
+                <td>Theory</td>
+                <td>100</td>
+                <td> 30 </td>
+                <td>{{item1.electrical}}</td>
+              </tr>
+              <tr>
+                <td>NEC101</td>
+                <td colspan="2">Electronic Engg.</td>
+                <td>Theory</td>
+                <td>100</td>
+                <td> 30 </td>
+                <td>{{item1.electronics }}</td>
+              </tr>
+              <tr>
+                <td>NAS152</td>
+                <td colspan="2">Engg. Chemistry Lab</td>
+                <td>Practical</td>
+                <td>30</td>
+                <td>15</td>
+                <td>{{item1.chemlab}}</td>
+              </tr>
+              <tr>
+                <td>NAS151</td>
+                <td colspan="2">Engg. Physics Lab</td>
+                <td>Practical</td>
+                <td>30</td>
+                <td>15</td>
+                <td>{{item1.physicslab }}</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr *ngFor="let item1 of collection">
+                <td colspan="4" class="footer">Total Marks</td>
+                <td>560</td>
+                <td>180</td>
+                <!-- <td>{{item1.physics + item1.chemistry + item1.maths + item1.electrical + item1.electronics +  item1.physicslab + item1.chemlab}}</td> -->
+                <td>{{item1 | total1 }}</td>
+              </tr>
+              <tr *ngFor="let item1 of collection">
+                <td colspan="4" class="footer">Percentage</td>
+                <!-- <td colspan="3">{{ | total1 * 100 / 560).toFixed(2)}} %</td> -->
+                <td colspan="3">{{((item1 | total1)  * 100 / 560).toFixed(2)}} %</td>
+              </tr>
+          </table>
+
+
+

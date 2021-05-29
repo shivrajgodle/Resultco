@@ -10,21 +10,27 @@
 
 
 
-<a mat-icon class="example-icon result_btn btn btn-primary" routerLink="/admin/add-new-student">
+<a mat-icon  class="example-icon result_btn btn btn-primary" (click)="onAddnewstude()" routerLink="/admin/add-new-student/:id">
 <mat-icon class="iconn1">add_circle</mat-icon>
 <span>Add New Student</span>
 </a>
 
 
-<a mat-icon class="example-icon result_btn btn btn-warning" routerLink="/admin/insert-new-result">
+<a mat-icon class="example-icon result_btn btn btn-warning" (click)="onAddnewres()"  routerLink="/admin/insert-new-result">
   <mat-icon class="iconn1">create_new_folder</mat-icon>
   <span>Add New Result</span>
   </a>
 
-  <a mat-icon class="example-icon result_btn btn btn-success" routerLink="/admin/registered-students">
+  <a mat-icon class="example-icon result_btn btn btn-success" (click)="onRegistredstud()" routerLink="/admin/registered-students">
     <mat-icon class="iconn1">group</mat-icon>
     <span>Registered Students</span>
     </a>
+
+    <a mat-icon class="example-icon result_btn btn btn-success" (click)="onLogout()">
+      <mat-icon class="iconn1">group</mat-icon>
+      <span>Logout</span>
+      </a>
+
 
 
 

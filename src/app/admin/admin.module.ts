@@ -12,6 +12,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import {NavbarComponent} from '../navbar/navbar.component';
 import { RegisteredStudentsComponent } from './registered-students/registered-students.component';
 import { AdminNavComponent } from './admin-nav/admin-nav.component';
+
+
 @NgModule({
   declarations: [
     LoginComponent,
@@ -21,8 +23,8 @@ import { AdminNavComponent } from './admin-nav/admin-nav.component';
     NavbarComponent,
     RegisteredStudentsComponent,
     AdminNavComponent
-    
-    
+
+
   ],
   imports: [
     CommonModule,
@@ -30,6 +32,7 @@ import { AdminNavComponent } from './admin-nav/admin-nav.component';
     MaterialModule,
     MatSnackBarModule,
     MatIconModule
+  
   ],
   exports:[NavbarComponent]
 })

@@ -1,8 +1,16 @@
 <app-admin-nav></app-admin-nav>
 <h1>Registered Students</h1>
 
-<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<div class="mat-elevation-z8">
+
+<mat-table [dataSource]="dataSource"  class="mat-elevation-z8">
   <!-- Position Column -->
+
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef> id </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+  </ng-container>
+
   <ng-container matColumnDef="Course_Name">
     <mat-header-cell *matHeaderCellDef> Course Name </mat-header-cell>
     <mat-cell *matCellDef="let element"> {{element.course_name}} </mat-cell>
@@ -38,6 +46,23 @@
     <mat-cell *matCellDef="let element"> {{element.gender}} </mat-cell>
   </ng-container>
 
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef></mat-header-cell>
+    <mat-cell *matCellDef="let element">
+
+      <a routerLink="/admin/add-new-student/{{element.id}}"><mat-icon>launch</mat-icon></a>
+      <!-- <a (click)="deleteRms(element.id)"><mat-icon>delete_outline</mat-icon></a> -->
+
+      <button mat-icon-button color="warn" (click)="deleteRms(element.id)"><mat-icon>delete_outline</mat-icon></button>
+
+    </mat-cell>
+  </ng-container>
+
+
   <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
   <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 </mat-table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</div>
