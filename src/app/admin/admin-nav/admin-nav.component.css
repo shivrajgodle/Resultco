@@ -11,6 +11,13 @@
     border-radius:10px ;
   } */
 
+.logo{
+  padding: 0px 5px;
+  font-size: 20px;
+}
+
+
+
 
   .other-spacer1 {
     flex: auto;

@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<!-- <app-navbar></app-navbar>
 
 <div class="bootstrap-wrapper">
     <div class="container">
@@ -10,13 +10,12 @@
                 <h1 class="text-center">Log in to RESULTCO</h1>
 
               <div *ngIf="isLoginerr" class="red-text center error-message">
-                <i class="material-icons">error</i> 
+                <i class="material-icons">error</i>
                 incorrect admin-id or password
               </div>
-              
+
                 <form #loginForm="ngForm" (ngSubmit)="onLogin(Admin_Id.value,PassWord.value)">
 
-                    <!-- Admin ID -->
                     <div class="form-group">
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Admin Id</mat-label>
@@ -25,7 +24,7 @@
                     </mat-form-field>
                   </div>
 
-                    <!-- Password -->
+
                     <div class="form-group">
                     <mat-form-field class="full-width" appearance="outline">
                       <mat-label>Password</mat-label>
@@ -36,11 +35,59 @@
 
                      <div class="container">
                        <button [disabled]="!loginForm.valid" type="submit" mat-raised-button color="primary">Login</button>
-                      
+
                      </div>
                   </form>
                  </div>
                 </div>
               </div>
             </div>
+ -->
 
+<app-navbar></app-navbar>
+
+ <div fxLayout="row" fxLayout.xs="column">
+
+  <div fxFlex="100%" fxFlex.xs="100%"   class="loginForm" fxLayoutAlign="center center">
+   <mat-card fxFlex="70%" fxFlex.xs="90%" fxFlex.sm="100%" fxFlex.md="100%" fxFlex.lg="100%">
+
+
+    <form #loginForm="ngForm" (ngSubmit)="onLogin(Admin_Id.value,PassWord.value)" fxLayout="column" fxLayoutAlign="center center">
+
+      <div>
+        <img src="assets\img\logo.jpg" >
+      </div><br>
+      <p>
+        <mat-label style="color: black; font-size: large;">Log in to RESULTCO </mat-label>
+      </p>
+
+     <p>
+       <mat-form-field appearance="outline">
+         <mat-label>AdminId</mat-label>
+         <input type="text" #Admin_Id ngModel required matInput name="username"  placeholder="Enter Id..."  class="form-control">
+         <mat-icon matSuffix>verified_user</mat-icon>
+
+       </mat-form-field>
+     </p>
+
+     <p>
+       <mat-form-field appearance="outline">
+         <mat-label>Password</mat-label>
+         <input type="password" #PassWord ngModel required matInput name="password" placeholder="Enter Password..."  class="form-control"
+         >
+         <mat-icon matSuffix>vpn_key</mat-icon>
+
+       </mat-form-field>
+     </p>
+
+     <!-- <button [disabled]="!loginForm.valid" type="submit" mat-raised-button color="primary">Login</button> -->
+     <button [disabled]="!loginForm.valid" type="submit" mat-raised-button color="primary">Login</button>
+     </form>
+
+   </mat-card>
+
+
+  </div>
+
+</div>
+<app-header-footer></app-header-footer>

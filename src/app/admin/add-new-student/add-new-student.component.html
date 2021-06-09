@@ -1,4 +1,4 @@
-<app-admin-nav></app-admin-nav>
+<!-- <app-admin-nav></app-admin-nav>
 
 <div class="bootstrap-wrapper">
   <div class="container">
@@ -7,10 +7,11 @@
               <div class="container">
                   <img src="assets\img\logo.jpg" >
               </div>
+
               <h1 class="text-center">Add New Student</h1>
 
               <form [formGroup]="addNewStud" (ngSubmit)="onAddNewStud($event)">
-                  <!-- course name -->
+
                   <div class="form-group">
                   <mat-form-field class="full-width" appearance="outline">
                       <mat-label>Course Name</mat-label>
@@ -19,7 +20,7 @@
                   </mat-form-field>
                   </div>
 
-                  <!-- Branch Name -->
+
                   <div class="form-group">
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Branch Name</mat-label>
@@ -28,7 +29,7 @@
                   </mat-form-field>
                   </div>
 
-                  <!-- Roll No -->
+
                   <div class="form-group">
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Roll Number</mat-label>
@@ -38,7 +39,7 @@
                    </div>
 
 
-                  <!-- Student Name -->
+
                   <div class="form-group">
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Student Name</mat-label>
@@ -48,7 +49,7 @@
                    </div>
 
 
-                  <!-- Father Name -->
+
                   <div class="form-group">
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Father Name</mat-label>
@@ -57,7 +58,7 @@
                    </mat-form-field>
                    </div>
 
-                  <!-- Gender-->
+
                   <div class="form-group">
                   <mat-form-field class="full-width" appearance="outline">
                     <mat-label>Gender</mat-label>
@@ -79,5 +80,96 @@
           </div>
 
 
+<app-header-footer></app-header-footer>
+ -->
 
 
+<app-admin-nav></app-admin-nav>
+
+ <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="25px">
+
+
+   <div fxFlex="100%" class="addnewStu" fxLayoutAlign="center">
+    <mat-card fxFlex="70%" fxFlex.xs="90%" fxFlex.sm="100%" fxFlex.md="100%" fxFlex.lg="100%">
+
+      <form [formGroup]="addNewStud" fxLayout="column" fxLayoutAlign="center center" (ngSubmit)="onAddNewStud($event)">
+
+      <div>
+          <img src="assets\img\logo.jpg" >
+      </div> <br>
+      <mat-card-header>
+        <p>
+          <mat-label style="color: black; font-size: large;">{{title}}</mat-label>
+        </p>
+
+      </mat-card-header>
+      <mat-card-content>
+
+
+
+      <p>
+        <mat-form-field  appearance="outline">
+          <mat-label>Course Name</mat-label>
+          <input type="text" required matInput placeholder="Enter Here..." class="form-control" formControlName="course_name">
+
+      </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Branch Name</mat-label>
+          <input type="text"  required matInput placeholder="Enter Here..." class="form-control" formControlName="branch_name">
+
+        </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Roll Number</mat-label>
+          <input type="number" required matInput placeholder="Enter Here..." class="form-control" formControlName="roll_no">
+
+         </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Student Name</mat-label>
+          <input type="text"  required matInput placeholder="Enter Here..." class="form-control" formControlName="student_name">
+
+         </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Father Name</mat-label>
+          <input type="text"  required matInput placeholder="Enter Here..." class="form-control" formControlName="father_name">
+
+         </mat-form-field>
+      </p>
+
+      <p>
+        <mat-form-field class="full-width" appearance="outline">
+          <mat-label>Gender</mat-label>
+          <input type="text"  required matInput placeholder="Enter Here..." class="form-control" formControlName="gender">
+
+         </mat-form-field>
+      </p>
+
+
+      <div>
+          <button [disabled]=!addNewStud.valid type="submit"  mat-raised-button color="primary" name="save">Save</button>
+          <button [disabled]=!addNewStud.valid type="submit" class="margin-left" mat-raised-button color="accent" name="update">update</button>
+      </div>
+
+
+    </mat-card-content>
+
+  </form>
+
+    </mat-card>
+
+
+   </div>
+ </div>
+
+<app-header-footer></app-header-footer>

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BridgeRoutingModule } from './bridge-routing.module';
 import { HomeComponent } from './home/home.component';
-import {AdminModule} from '../admin/admin.module';
+
 
 
 @NgModule({
@@ -12,8 +12,7 @@ import {AdminModule} from '../admin/admin.module';
   ],
   imports: [
     CommonModule,
-    BridgeRoutingModule,
-    AdminModule
+    BridgeRoutingModule
   ]
 })
 export class BridgeModule { }

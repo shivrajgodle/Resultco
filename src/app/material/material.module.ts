@@ -11,6 +11,8 @@ import {FormsModule} from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatCardModule} from '@angular/material/card';
 const MaterialComponents =[
   MatInputModule,
   MatFormFieldModule,
@@ -23,7 +25,9 @@ const MaterialComponents =[
   FormsModule,
   MatTableModule,
   MatPaginatorModule,
-  MatSortModule
+  MatSortModule,
+  FlexLayoutModule,
+  MatCardModule
 ]
 
 @NgModule({

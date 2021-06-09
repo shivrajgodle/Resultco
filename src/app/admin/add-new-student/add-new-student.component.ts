@@ -13,6 +13,7 @@ import { ActivatedRoute } from '@angular/router'
 export class AddNewStudentComponent implements OnInit {
 
   alert:boolean=false
+  title:String = "Add New Student"
 
   addNewStud = new FormGroup({
     course_name:new FormControl(''),
@@ -33,6 +34,7 @@ export class AddNewStudentComponent implements OnInit {
 
     this.rms.getcurrentRms(this.router.snapshot.params.id).subscribe((result)=>{
 
+      this.title = "Update Student"
       console.warn("result",result)
       this.res = result
 

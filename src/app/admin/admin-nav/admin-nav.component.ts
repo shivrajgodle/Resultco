@@ -1,17 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import {MediaObserver,MediaChange} from '@angular/flex-layout';
+import {Subscription} from 'rxjs'
+
 import Swal from 'sweetalert2'
 @Component({
   selector: 'app-admin-nav',
   templateUrl: './admin-nav.component.html',
   styleUrls: ['./admin-nav.component.css']
 })
-export class AdminNavComponent implements OnInit {
+export class AdminNavComponent implements OnInit, OnDestroy  {
 
-  constructor(private cookie:CookieService,private router:Router) { }
+
+
+  mediaSub!:Subscription;
+  deviceXs!:boolean;
+  constructor(private cookie:CookieService,private router:Router,public MediaObserver:MediaObserver) { }
 
   ngOnInit(): void {
+
+   this.mediaSub = this.MediaObserver.media$.subscribe((result:MediaChange)=>{
+    console.log(result.mqAlias)
+
+    this.deviceXs = result.mqAlias === 'xs' ? true:false
+
+    })
+
+  }
+  ngOnDestroy(){
+    this.mediaSub.unsubscribe();
   }
 
   onAddnewstude(){

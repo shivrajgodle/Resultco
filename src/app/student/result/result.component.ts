@@ -82,7 +82,7 @@ export class ResultComponent implements OnInit {
 
       if(!this.collection.length)
       {
-        
+
         const Toast = Swal.mixin({
               toast: true,
               position: 'center',
@@ -94,7 +94,7 @@ export class ResultComponent implements OnInit {
                 toast.addEventListener('mouseleave', Swal.resumeTimer)
               }
             })
-      
+
             Toast.fire({
               icon: 'error',
               title: 'incorect Roll Number'
@@ -113,7 +113,7 @@ export class ResultComponent implements OnInit {
       }
     })
 
-   
+
 
 
 
@@ -121,6 +121,15 @@ export class ResultComponent implements OnInit {
 
  }
 
+
+
+//  -----------------print result------------------
+
+// name = 'Angular ' + VERSION.major;
+
+  printPage() {
+    window.print();
+  }
 
 
 }

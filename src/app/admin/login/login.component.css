@@ -5,3 +5,8 @@
 .mat-form-field {
     margin-right: 8px;
   }
+
+  .loginForm{
+  padding:20px;
+  background-color:beige;
+}

@@ -36,3 +36,10 @@ table {
 tbody >tr:nth-child(odd) {
   background: #D1D0CE;
 }
+
+
+@media print {
+  button {
+    display: none;
+  }
+}

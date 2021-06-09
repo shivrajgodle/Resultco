@@ -1,13 +1,8 @@
-<!-- <p>
-  <mat-toolbar>
-    <span>Resultco</span>
-  </mat-toolbar>
-</p> -->
-
+<!--
 
 <mat-toolbar color="primary">
 
-  <a routerLink="#"
+  <a routerLink=""
   mat-icon
   class="example-icon favorite-icon btn btn-primary">
   <mat-icon class="iconn1">home</mat-icon>
@@ -26,7 +21,7 @@
 
 
 
-  <!-- <span class="other-spacer1"></span> -->
+
   <span class="other-spacer1"></span>
   <a mat-icon class="example-icon favorite-icon marginn btn btn-success" routerLink="admin/login">
     <mat-icon class="iconn">account_circle</mat-icon>
@@ -35,55 +30,46 @@
 
 
 
-</mat-toolbar>
+</mat-toolbar> -->
 
-<!--
+
+
+
+
+
+
+
+
+
 <mat-toolbar color="primary">
 
-  <a mat-icon-bprimary
-      class="example-icon"
-      aria-label="Example icon-button with menu icon">
-      <mat-icon>menu_book</mat-icon>
-      <span>E-Notes</span>
-  </a>
+  <mat-toolbar-row fxLayoutAlign="space-between center">
+    <div fxLayout="row" >
+      <button mat-raised-button color="primary" routerLink="">
+        <mat-icon>home</mat-icon>
+        <span class="logo">ResultCo</span>
+      </button> &nbsp;&nbsp;
 
-  <a  routerLink="#"
-      mat-icon-button
-      class="example-icon favorite-icon mr-2 ml-2 " >
-      <mat-icon>home</mat-icon>
-      <span>Home</span>
-  </a>
+      <div>
+        <button mat-raised-button color="accent"  routerLink="/student/result">
+          <mat-icon class="iconn1">search</mat-icon>
+         Results
+        </button>
+     </div>
 
-  <a  routerLink="#"
-      mat-icon-button
-      class="example-icon favorite-icon mr-2 ml-2 btn  btn-primary">
-      <mat-icon>library_add</mat-icon>
-      <span>Add Notes</span>
-  </a>
-
-  <a  routerLink="#"
-      mat-icon-button
-      class="example-icon favorite-icon mr-2 ml-2 btn  btn-primary " >
-      <mat-icon>article</mat-icon>
-      <span>Show Notes</span>
-  </a>
+    </div>
+    <button mat-icon-button color="warn"  routerLink="admin/login">
+      <mat-icon>account_circle</mat-icon>
+    <span>Login</span>
 
 
+    </button>
+    <div>
 
 
-  <span class="example-spacer"></span>
+    </div>
+  </mat-toolbar-row>
 
-  <a  routerLink="#"
-      mat-icon-button
-      class="example-icon favorite-icon mr-2 ml-2 btn  btn-success" >
-      <mat-icon>person</mat-icon>
-      {{profile}}
-  </a>
 
-  <a routerLink="#"
-     mat-icon-button
-     class="example-icon mr-2 ml-2 btn  btn-warning" >
-    <mat-icon>logout</mat-icon>
-    <span>Logout</span>
-  </a>
-</mat-toolbar> -->
+</mat-toolbar>
+

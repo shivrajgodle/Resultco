@@ -12,6 +12,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import {NavbarComponent} from '../navbar/navbar.component';
 import { RegisteredStudentsComponent } from './registered-students/registered-students.component';
 import { AdminNavComponent } from './admin-nav/admin-nav.component';
+import {HeaderFooterComponent} from '../header-footer/header-footer.component'
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AdminNavComponent } from './admin-nav/admin-nav.component';
     HomepageComponent,
     NavbarComponent,
     RegisteredStudentsComponent,
-    AdminNavComponent
+    AdminNavComponent,
+    HeaderFooterComponent
 
 
   ],
@@ -32,7 +34,7 @@ import { AdminNavComponent } from './admin-nav/admin-nav.component';
     MaterialModule,
     MatSnackBarModule,
     MatIconModule
-  
+
   ],
   exports:[NavbarComponent]
 })
